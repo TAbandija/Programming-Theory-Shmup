@@ -201,10 +201,10 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 5.4686737
+  m_Radius: 5.491665
   m_Height: 54.30596
   m_Direction: 2
-  m_Center: {x: 0.0003414154, y: 6.5786686, z: -2.9700775}
+  m_Center: {x: 0.0003414154, y: 3.980812, z: -2.9700775}
 --- !u!65 &734214739795652350
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -216,8 +216,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 56.45953, y: 15.879444, z: 13.213284}
-  m_Center: {x: 0, y: 11.188578, z: -1.0735378}
+  m_Size: {x: 56.45953, y: 17.304813, z: 13.213284}
+  m_Center: {x: 0, y: 6.7515316, z: -1.0735378}
 --- !u!114 &734214739795652324
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -233,8 +233,6 @@ MonoBehaviour:
   bullet: {fileID: 2179789818232356514, guid: 24f65b27aa7fa074ab810e8611c91361, type: 3}
   speed: 15
   bulletForce: 75
-  rateOfFire: 0.5
-  rateOfFireMain: 1.2
 --- !u!1 &734214739795748953
 GameObject:
   m_ObjectHideFlags: 0

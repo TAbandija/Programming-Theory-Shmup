@@ -31,9 +31,13 @@ public class BulletMove : MonoBehaviour
         }
 
     }
-
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider other)
     {
+        if (other.CompareTag("Bullet") || other.CompareTag("EnemyBullet"))
+        {
+            return;
+        }
         Destroy(gameObject);
     }
+
 }

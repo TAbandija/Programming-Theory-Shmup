@@ -8,7 +8,7 @@ public class EnemyControlJet : EnemyPlane
 
     private float startFiring = 1.0f;
     private Vector3 gunOffset;
-    [SerializeField] float rateOfFire = 0.5f;
+    float rateOfFire = 0.5f;
     private GameObject player;
 
     private void Start()
