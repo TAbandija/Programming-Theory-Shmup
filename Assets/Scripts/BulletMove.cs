@@ -33,10 +33,17 @@ public class BulletMove : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
+        // Bullets should not disapear if they hit eachother.
         if (other.CompareTag("Bullet") || other.CompareTag("EnemyBullet"))
         {
             return;
         }
+        // Enemy planes are invulnerable to enemy bullets. Bullets will not disapear.
+        if (other.CompareTag("Enemy") && gameObject.CompareTag("EnemyBullet")) 
+        {
+            return;
+        }
+
         Destroy(gameObject);
     }
 

@@ -131,9 +131,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bullet: {fileID: 2179789818232356514, guid: 24f65b27aa7fa074ab810e8611c91361, type: 3}
+  planeScore: 15
   speed: 25
   bulletForce: 75
-  rateOfFire: 1.9
 --- !u!1 &9028823327707712820
 GameObject:
   m_ObjectHideFlags: 0

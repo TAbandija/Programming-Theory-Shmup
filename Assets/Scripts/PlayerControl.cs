@@ -32,6 +32,8 @@ public class PlayerControl : MonoBehaviour
 
     void ShootBullet()
     {
+        // ABSTRACTION
+
         GameObject bulletInstance = Instantiate(bullet, transform.position + bulletOffSet, bullet.transform.rotation);
         bulletInstance.GetComponent<Rigidbody>().AddForce(transform.forward * bulletForce, ForceMode.Impulse);
     }
@@ -59,6 +61,8 @@ public class PlayerControl : MonoBehaviour
 
     bool CheckOutOfBounds()
     {
+        // ABSTRACTION
+
         bool isOutOfBounds;
 
         isOutOfBounds = transform.position.z > rangeLimitY || transform.position.z < -rangeLimitY || transform.position.x > rangeLimitX || transform.position.x < -rangeLimitX;
@@ -68,6 +72,7 @@ public class PlayerControl : MonoBehaviour
 
     void PlayerHit()
     {
+        // ABSTRACTION
         Debug.Log("Player hit");
     }
 

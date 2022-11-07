@@ -8,8 +8,9 @@ public class EnemyPlane : MonoBehaviour
     private float lowerBounds = -190;
     public GameObject bullet;
 
+    [SerializeField] private float planeScore;
     [SerializeField] private float speed = 25;
-    [SerializeField] private float bulletForce = 10;
+    [SerializeField] private float bulletForce = 75;
     
 
 
@@ -29,11 +30,15 @@ public class EnemyPlane : MonoBehaviour
 
     public void MovePlane()
     {
+        // ABSTRACTION
+
         transform.Translate(Vector3.forward * Time.deltaTime * speed);
     }
 
     public void CheckOutOfBounds()
     {
+        // ABSTRACTION
+
         if (transform.position.x < -rangeX || transform.position.x > rangeX || transform.position.z < lowerBounds)
         {
             Destroy(gameObject);
@@ -43,8 +48,10 @@ public class EnemyPlane : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        
         if (other.CompareTag("Bullet"))
         {
+            GameManager.Instance.score += planeScore;
             Destroy(gameObject);
         }
 

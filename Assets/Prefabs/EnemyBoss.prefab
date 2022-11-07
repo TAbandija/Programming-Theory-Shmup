@@ -231,6 +231,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bullet: {fileID: 2179789818232356514, guid: 24f65b27aa7fa074ab810e8611c91361, type: 3}
+  planeScore: 50
   speed: 15
   bulletForce: 75
 --- !u!1 &734214739795748953
