@@ -6,7 +6,7 @@ public class PlayerControl : MonoBehaviour
 {
     private Rigidbody playerRB;
     [SerializeField] private float speed = 10;
-    private float rangeLimitY = 125;
+    private float rangeLimitY = 150;
     private float rangeLimitX = 100;
 
     // Start is called before the first frame update
@@ -31,18 +31,24 @@ public class PlayerControl : MonoBehaviour
 
         Vector3 currentPos = transform.position;
         //up and down movement
-        if (transform.position.z < rangeLimitY && transform.position.z > -rangeLimitY)
-        {
-            transform.Translate(Vector3.forward * verticalInput * speed * Time.deltaTime);
-        }
+        transform.Translate(Vector3.forward * verticalInput * speed * Time.deltaTime);
+
         // left and right movement
-        if (transform.position.x <= rangeLimitX && transform.position.x >= -rangeLimitX)
-        {
-            transform.Translate(Vector3.right * horizontalInput * speed * Time.deltaTime);
-        }
-        else
+        transform.Translate(Vector3.right * horizontalInput * speed * Time.deltaTime);
+
+        //Checks if player is out of Bounds
+        if (CheckOutOfBounds())
         {
             transform.position = currentPos;
         }
+    }
+
+    bool CheckOutOfBounds()
+    {
+        bool isOutOfBounds;
+
+        isOutOfBounds = transform.position.z > rangeLimitY || transform.position.z < -rangeLimitY || transform.position.x > rangeLimitX || transform.position.x < -rangeLimitX;
+
+        return isOutOfBounds;
     }
 }
