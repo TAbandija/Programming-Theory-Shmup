@@ -134,6 +134,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: EnemyDrone
       objectReference: {fileID: 0}
+    - target: {fileID: 123344, guid: d230e4bfad140384bac0f92f6e33f220, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
     - target: {fileID: 460432, guid: d230e4bfad140384bac0f92f6e33f220, type: 3}
       propertyPath: m_RootOrder
       value: 6
@@ -148,7 +152,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 460432, guid: d230e4bfad140384bac0f92f6e33f220, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -15.33333
+      value: 53.700005
       objectReference: {fileID: 0}
     - target: {fileID: 460432, guid: d230e4bfad140384bac0f92f6e33f220, type: 3}
       propertyPath: m_LocalRotation.w
@@ -214,6 +218,22 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
+--- !u!114 &242355647
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 242355640}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45cbd404f9b277e4b8d1846e69c24509, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bullet: {fileID: 2179789818232356514, guid: 24f65b27aa7fa074ab810e8611c91361, type: 3}
+  speed: 25
+  bulletForce: 75
+  rateOfFire: 0.5
 --- !u!1 &682077271
 GameObject:
   m_ObjectHideFlags: 0
@@ -417,6 +437,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: af29f0ea7e5403641b3b244ede69c374, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: af29f0ea7e5403641b3b244ede69c374, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -496,7 +520,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dde7e546e016404499ae5ce94c3a1e42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 30
+  speed: 80
 --- !u!65 &908464281
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -605,13 +629,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: EnemyBoss
       objectReference: {fileID: 0}
+    - target: {fileID: 100010, guid: 2a9b1ebd3cb507148833665f977d3fee, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
     - target: {fileID: 400010, guid: 2a9b1ebd3cb507148833665f977d3fee, type: 3}
       propertyPath: m_RootOrder
       value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 400010, guid: 2a9b1ebd3cb507148833665f977d3fee, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.232508
+      value: 1.1
       objectReference: {fileID: 0}
     - target: {fileID: 400010, guid: 2a9b1ebd3cb507148833665f977d3fee, type: 3}
       propertyPath: m_LocalPosition.y
@@ -619,7 +647,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400010, guid: 2a9b1ebd3cb507148833665f977d3fee, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -15.33333
+      value: 52.5
       objectReference: {fileID: 0}
     - target: {fileID: 400010, guid: 2a9b1ebd3cb507148833665f977d3fee, type: 3}
       propertyPath: m_LocalRotation.w
@@ -699,6 +727,22 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
+--- !u!114 &1169062961
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1169062953}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 393a7014e8dfc1140b4dbbb3329f1485, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bullet: {fileID: 2179789818232356514, guid: 24f65b27aa7fa074ab810e8611c91361, type: 3}
+  speed: 15
+  bulletForce: 75
+  rateOfFire: 0.5
 --- !u!1001 &1613101298
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -709,6 +753,10 @@ PrefabInstance:
     - target: {fileID: 167466, guid: 670c6e451250ee7448bb1a36fb0e6647, type: 3}
       propertyPath: m_Name
       value: EnemyHeli
+      objectReference: {fileID: 0}
+    - target: {fileID: 167466, guid: 670c6e451250ee7448bb1a36fb0e6647, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
       objectReference: {fileID: 0}
     - target: {fileID: 478116, guid: 670c6e451250ee7448bb1a36fb0e6647, type: 3}
       propertyPath: m_RootOrder
@@ -724,7 +772,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 478116, guid: 670c6e451250ee7448bb1a36fb0e6647, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -15.33333
+      value: 53.700005
       objectReference: {fileID: 0}
     - target: {fileID: 478116, guid: 670c6e451250ee7448bb1a36fb0e6647, type: 3}
       propertyPath: m_LocalRotation.w
@@ -790,6 +838,22 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
+--- !u!114 &1613101306
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1613101299}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbd38924a4d54c647b8d7dcc194af368, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bullet: {fileID: 2179789818232356514, guid: 24f65b27aa7fa074ab810e8611c91361, type: 3}
+  speed: 30
+  bulletForce: 75
+  rateOfFire: 1
 --- !u!1001 &2030802218
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -800,6 +864,10 @@ PrefabInstance:
     - target: {fileID: 100014, guid: 32afb3201b7ffc943ae35ecab533eb32, type: 3}
       propertyPath: m_Name
       value: EnemyJet
+      objectReference: {fileID: 0}
+    - target: {fileID: 100014, guid: 32afb3201b7ffc943ae35ecab533eb32, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
       objectReference: {fileID: 0}
     - target: {fileID: 400014, guid: 32afb3201b7ffc943ae35ecab533eb32, type: 3}
       propertyPath: m_RootOrder
@@ -815,7 +883,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400014, guid: 32afb3201b7ffc943ae35ecab533eb32, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -15.33333
+      value: 53.700005
       objectReference: {fileID: 0}
     - target: {fileID: 400014, guid: 32afb3201b7ffc943ae35ecab533eb32, type: 3}
       propertyPath: m_LocalRotation.w
@@ -881,3 +949,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
+--- !u!114 &2030802226
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2030802219}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2460659da81ab074eac465cf1f273363, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bullet: {fileID: 2179789818232356514, guid: 24f65b27aa7fa074ab810e8611c91361, type: 3}
+  speed: 45
+  bulletForce: 75
+  rateOfFire: 1
