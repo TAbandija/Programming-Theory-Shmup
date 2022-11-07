@@ -11,6 +11,7 @@ public class GameManager : MonoBehaviour
     private float startSpawnTime = 1.5f;
     private float spawnRate = 2.5f;
     private float m_score = 0;
+    private int playerLives = 3;
     public float score
     {
         // ENCAPSULATION
@@ -39,11 +40,11 @@ public class GameManager : MonoBehaviour
         InvokeRepeating("SpawnEnemyPlanes", startSpawnTime, spawnRate);
     }
 
-    // Update is called once per frame
-    void Update()
+    public void LoseLife()
     {
-        
+        playerLives--;
     }
+
 
     void SpawnEnemyPlanes()
     {
