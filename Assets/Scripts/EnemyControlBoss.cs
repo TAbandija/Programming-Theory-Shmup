@@ -10,7 +10,7 @@ public class EnemyControlBoss : EnemyPlane
     private Vector3 gunOffset1;
     private Vector3 gunOffset2;
     private Vector3 gunOffsetMain;
-    [SerializeField] float rateOfFire = 0.5f;
+    [SerializeField] float rateOfFire = 1.3f;
     [SerializeField] float rateOfFireMain = 1.2f;
     private GameObject player;
 

@@ -43,6 +43,10 @@ public class EnemyPlane : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Destroy(gameObject);
+        if (other.CompareTag("Bullet"))
+        {
+            Destroy(gameObject);
+        }
+
     }
 }
