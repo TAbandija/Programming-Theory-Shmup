@@ -28,6 +28,10 @@ public class PlayerControl : MonoBehaviour
             ShootBullet();
         }
 
+        if (GameManager.Instance.isGameOver)
+        {
+            Destroy(gameObject);
+        }
     }
 
     void ShootBullet()
@@ -73,7 +77,8 @@ public class PlayerControl : MonoBehaviour
     void PlayerHit()
     {
         // ABSTRACTION
-        Debug.Log("Player hit");
+        Debug.Log("Player hit: " + GameManager.Instance.playerLives);
+        GameManager.Instance.LoseLife();
     }
 
     private void OnTriggerEnter(Collider other)

@@ -24,6 +24,9 @@ public class EnemyControlDrone : EnemyPlane
 
     private void FireGun()
     {
-        ShootBullet(gunOffset);
+        if (!GameManager.Instance.isGameOver)
+        {
+            ShootBullet(gunOffset);
+        }
     }
 }

@@ -26,6 +26,9 @@ public class EnemyControlJet : EnemyPlane
 
     private void FireGun()
     {
-        ShootBullet(gunOffset, player.transform.position);
+        if (!GameManager.Instance.isGameOver)
+        {
+            ShootBullet(gunOffset, player.transform.position);
+        }
     }
 }

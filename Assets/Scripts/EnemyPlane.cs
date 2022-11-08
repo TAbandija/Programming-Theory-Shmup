@@ -16,16 +16,22 @@ public class EnemyPlane : MonoBehaviour
 
     public virtual void ShootBullet(Vector3 offset)
     {
-        GameObject bulletInstance = Instantiate(bullet, transform.position + offset, bullet.transform.rotation);
-        bulletInstance.GetComponent<Rigidbody>().AddForce(transform.forward * bulletForce, ForceMode.Impulse);
+        if (!GameManager.Instance.isGameOver)
+        {
+            GameObject bulletInstance = Instantiate(bullet, transform.position + offset, bullet.transform.rotation);
+            bulletInstance.GetComponent<Rigidbody>().AddForce(transform.forward * bulletForce, ForceMode.Impulse);
+        }
     }
 
     public virtual void ShootBullet(Vector3 offset,Vector3 target)
     {
         // POLYMORPHISM
-        GameObject bulletInstance = Instantiate(bullet, transform.position + offset, bullet.transform.rotation);
-        Vector3 fireDirection = (target - bulletInstance.transform.position).normalized;
-        bulletInstance.GetComponent<Rigidbody>().AddForce(fireDirection * bulletForce, ForceMode.Impulse);
+        if (!GameManager.Instance.isGameOver)
+        {
+            GameObject bulletInstance = Instantiate(bullet, transform.position + offset, bullet.transform.rotation);
+            Vector3 fireDirection = (target - bulletInstance.transform.position).normalized;
+            bulletInstance.GetComponent<Rigidbody>().AddForce(fireDirection * bulletForce, ForceMode.Impulse);
+        }
     }
 
     public void MovePlane()
@@ -51,7 +57,10 @@ public class EnemyPlane : MonoBehaviour
         
         if (other.CompareTag("Bullet"))
         {
-            GameManager.Instance.score += planeScore;
+            if (!GameManager.Instance.isGameOver)
+            {
+                GameManager.Instance.score += planeScore;
+            }
             Destroy(gameObject);
         }
 

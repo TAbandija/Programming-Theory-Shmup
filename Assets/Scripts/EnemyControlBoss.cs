@@ -32,12 +32,18 @@ public class EnemyControlBoss : EnemyPlane
 
     private void FireGun()
     {
-        ShootBullet(gunOffset1);
-        ShootBullet(gunOffset2);
+        if (!GameManager.Instance.isGameOver)
+        {
+            ShootBullet(gunOffset1);
+            ShootBullet(gunOffset2);
+        }
     }
 
     private void FireGunMain()
     {
-        ShootBullet(gunOffsetMain, player.transform.position);
+        if (!GameManager.Instance.isGameOver)
+        {
+            ShootBullet(gunOffsetMain, player.transform.position);
+        }
     }
 }
